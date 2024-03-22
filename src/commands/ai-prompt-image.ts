@@ -60,7 +60,9 @@ export const AiPromptImage: Command = {
         console.error('Error reading file from URL:', error);
       }
     } catch (error) {
-      console.error('Error generating image:', error);
+      interaction.followUp(
+        'I could not generate anything based on the given prompt. Try again bad boy',
+      );
     }
   },
 };
